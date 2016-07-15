@@ -27,6 +27,7 @@ namespace Project3S {
 			InitializeComponent();
 			richTextBox1->Text = strText;
 		}
+
 	protected:
 		/// <summary>
 		/// 使用中のリソースをすべてクリーンアップします。
@@ -39,11 +40,10 @@ namespace Project3S {
 			}
 		}
 	private: System::Windows::Forms::ToolStrip^  toolStrip1;
-	protected:
-	private: System::Windows::Forms::ToolStripButton^  btnCopy;
-	private: System::Windows::Forms::StatusStrip^  statusLabel1;
+	private: System::Windows::Forms::StatusStrip^  statusStrip1;
 	private: System::Windows::Forms::RichTextBox^  richTextBox1;
-
+	private: System::Windows::Forms::ToolStripButton^  btnCopy;
+	private: System::Windows::Forms::ToolStripStatusLabel^  statusLabel1;
 	protected:
 
 	private:
@@ -62,9 +62,11 @@ namespace Project3S {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(FormJoinView::typeid));
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
 			this->btnCopy = (gcnew System::Windows::Forms::ToolStripButton());
-			this->statusLabel1 = (gcnew System::Windows::Forms::StatusStrip());
+			this->statusStrip1 = (gcnew System::Windows::Forms::StatusStrip());
+			this->statusLabel1 = (gcnew System::Windows::Forms::ToolStripStatusLabel());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->toolStrip1->SuspendLayout();
+			this->statusStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// toolStrip1
@@ -82,22 +84,30 @@ namespace Project3S {
 			this->btnCopy->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCopy.Image")));
 			this->btnCopy->ImageTransparentColor = System::Drawing::Color::Magenta;
 			this->btnCopy->Name = L"btnCopy";
-			this->btnCopy->Size = System::Drawing::Size(62, 22);
-			this->btnCopy->Text = L"全文コピー ";
+			this->btnCopy->Size = System::Drawing::Size(59, 22);
+			this->btnCopy->Text = L"全文コピー";
 			this->btnCopy->Click += gcnew System::EventHandler(this, &FormJoinView::btnCopy_Click);
+			// 
+			// statusStrip1
+			// 
+			this->statusStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->statusLabel1 });
+			this->statusStrip1->Location = System::Drawing::Point(0, 239);
+			this->statusStrip1->Name = L"statusStrip1";
+			this->statusStrip1->Size = System::Drawing::Size(284, 22);
+			this->statusStrip1->TabIndex = 1;
+			this->statusStrip1->Text = L"statusStrip1";
 			// 
 			// statusLabel1
 			// 
-			this->statusLabel1->Location = System::Drawing::Point(0, 239);
 			this->statusLabel1->Name = L"statusLabel1";
-			this->statusLabel1->Size = System::Drawing::Size(284, 22);
-			this->statusLabel1->TabIndex = 1;
+			this->statusLabel1->Size = System::Drawing::Size(0, 17);
 			// 
 			// richTextBox1
 			// 
 			this->richTextBox1->BackColor = System::Drawing::SystemColors::Window;
 			this->richTextBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 11));
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(128)));
 			this->richTextBox1->Location = System::Drawing::Point(0, 25);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
@@ -112,12 +122,14 @@ namespace Project3S {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 261);
 			this->Controls->Add(this->richTextBox1);
-			this->Controls->Add(this->statusLabel1);
+			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->toolStrip1);
 			this->Name = L"FormJoinView";
 			this->Text = L"FormJoinView";
 			this->toolStrip1->ResumeLayout(false);
 			this->toolStrip1->PerformLayout();
+			this->statusStrip1->ResumeLayout(false);
+			this->statusStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
