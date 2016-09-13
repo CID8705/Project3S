@@ -320,7 +320,7 @@ namespace Project3S {
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
-			this->Text = L"0";
+			this->Text = L"14-髙野誉将";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->statusStrip1->ResumeLayout(false);
