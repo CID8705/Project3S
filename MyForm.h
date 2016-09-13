@@ -407,6 +407,9 @@ namespace Project3S {
 				richTextBox1->Text = "読み込みエラー";
 			}
 		}
+		else {
+			richTextBox1->Text = "";
+		}
 	}
 	private: System::Void mnuCopyFileList_Click(System::Object^  sender, System::EventArgs^  e) {
 		try {
