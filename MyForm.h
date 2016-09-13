@@ -318,6 +318,7 @@ namespace Project3S {
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->statusStrip1);
 			this->Controls->Add(this->menuStrip1);
+			this->KeyPreview = true;
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
 			this->Text = L"14-髙野誉将";
@@ -333,6 +334,7 @@ namespace Project3S {
 			this->splitContainer1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
+			this->KeyDown += gcnew KeyEventHandler(this, &MyForm::MyForm_KeyDown);
 
 		}
 #pragma endregion
@@ -346,6 +348,18 @@ namespace Project3S {
 	private: System::Void btnSetDir_Click(System::Object^  sender, System::EventArgs^  e) {
 		if (folderBrowserDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 			textBox1->Text = folderBrowserDialog1->SelectedPath;
+			listView1->Items->Clear();
+			try {
+				array<String^>^ files = System::IO::Directory::GetFiles(textBox1->Text->ToString(), "*.txt");
+				for (int i = 0; i < files->Length; ++i) {
+					array<String^>^ row = { System::IO::Path::GetFileName(files[i]), files[i] };
+					listView1->Items->Add(gcnew System::Windows::Forms::ListViewItem(row));
+				}
+				statusLabel1->Text = Convert::ToString(listView1->Items->Count);
+			}
+			catch (Exception^ e) {
+				statusLabel1->Text = "該当ファイルはありません：" + e->GetType();
+			}
 		}
 	}
 	private: System::Void mnuOpenDir_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -372,7 +386,6 @@ namespace Project3S {
 	}
 	private: System::Void btnReLoad_Click(System::Object^  sender, System::EventArgs^  e) {
 		listView1->Items->Clear();
-
 		try {
 			array<String^>^ files = System::IO::Directory::GetFiles(textBox1->Text->ToString(), "*.txt");
 			for (int i = 0; i< files->Length; ++i) {
@@ -472,6 +485,34 @@ namespace Project3S {
 	}
 	private: System::Void textBox1_DragDrop(System::Object^ sender, System::Windows::Forms::DragEventArgs^ e) {
 		textBox1->Text = cli::safe_cast<array<String^>^>(e->Data->GetData(System::Windows::Forms::DataFormats::FileDrop, false))[0];
+		listView1->Items->Clear();
+		try {
+			array<String^>^ files = System::IO::Directory::GetFiles(textBox1->Text->ToString(), "*.txt");
+			for (int i = 0; i < files->Length; ++i) {
+				array<String^>^ row = { System::IO::Path::GetFileName(files[i]), files[i] };
+				listView1->Items->Add(gcnew System::Windows::Forms::ListViewItem(row));
+			}
+			statusLabel1->Text = Convert::ToString(listView1->Items->Count);
+		}
+		catch (Exception^ e) {
+			statusLabel1->Text = "該当ファイルはありません：" + e->GetType();
+		}
+	}
+	private: System::Void MyForm_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		if (e->KeyCode == Keys::F5) {
+			listView1->Items->Clear();
+			try {
+				array<String^>^ files = System::IO::Directory::GetFiles(textBox1->Text->ToString(), "*.txt");
+				for (int i = 0; i < files->Length; ++i) {
+					array<String^>^ row = { System::IO::Path::GetFileName(files[i]), files[i] };
+					listView1->Items->Add(gcnew System::Windows::Forms::ListViewItem(row));
+				}
+				statusLabel1->Text = Convert::ToString(listView1->Items->Count);
+			}
+			catch (Exception^ e) {
+				statusLabel1->Text = "該当ファイルはありません：" + e->GetType();
+			}
+		}
 	}
 	};
 }
