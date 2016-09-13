@@ -10,7 +10,7 @@ namespace Project3S {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// FormJoinView ‚ÌŠT—v
+	/// FormJoinView ã®æ¦‚è¦
 	/// </summary>
 	public ref class FormJoinView : public System::Windows::Forms::Form
 	{
@@ -19,7 +19,7 @@ namespace Project3S {
 		{
 			InitializeComponent();
 			//
-			//TODO: ‚±‚±‚ÉƒRƒ“ƒXƒgƒ‰ƒNƒ^[ ƒR[ƒh‚ğ’Ç‰Á‚µ‚Ü‚·
+			//TODO: ã“ã“ã«ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãƒ¼ ã‚³ãƒ¼ãƒ‰ã‚’è¿½åŠ ã—ã¾ã™
 			//
 		}
 		FormJoinView(String^ strText)
@@ -30,7 +30,7 @@ namespace Project3S {
 
 	protected:
 		/// <summary>
-		/// g—p’†‚ÌƒŠƒ\[ƒX‚ğ‚·‚×‚ÄƒNƒŠ[ƒ“ƒAƒbƒv‚µ‚Ü‚·B
+		/// ä½¿ç”¨ä¸­ã®ãƒªã‚½ãƒ¼ã‚¹ã‚’ã™ã¹ã¦ã‚¯ãƒªãƒ¼ãƒ³ã‚¢ãƒƒãƒ—ã—ã¾ã™ã€‚
 		/// </summary>
 		~FormJoinView()
 		{
@@ -48,14 +48,14 @@ namespace Project3S {
 
 	private:
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi[•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠãƒ¼å¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi[ ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^[‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠãƒ¼ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -85,7 +85,7 @@ namespace Project3S {
 			this->btnCopy->ImageTransparentColor = System::Drawing::Color::Magenta;
 			this->btnCopy->Name = L"btnCopy";
 			this->btnCopy->Size = System::Drawing::Size(59, 22);
-			this->btnCopy->Text = L"‘S•¶ƒRƒs[";
+			this->btnCopy->Text = L"å…¨æ–‡ã‚³ãƒ”ãƒ¼";
 			this->btnCopy->Click += gcnew System::EventHandler(this, &FormJoinView::btnCopy_Click);
 			// 
 			// statusStrip1
@@ -138,10 +138,10 @@ namespace Project3S {
 	private: System::Void btnCopy_Click(System::Object^  sender, System::EventArgs^  e) {
 		try {
 			Clipboard::SetDataObject(richTextBox1->Text);
-			statusLabel1->Text = "‘S•¶‚ğƒRƒs[‚µ‚Ü‚µ‚½B";
+			statusLabel1->Text = "å…¨æ–‡ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚";
 		}
 		catch (Exception^ e) {
-			statusLabel1->Text = "ƒRƒs[ƒGƒ‰[F" + e->GetType();
+			statusLabel1->Text = "ã‚³ãƒ”ãƒ¼ã‚¨ãƒ©ãƒ¼ï¼š" + e->GetType();
 		}
 	}
 };

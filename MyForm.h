@@ -11,7 +11,7 @@ namespace Project3S {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// MyForm ‚ÌŠT—v
+	/// MyForm ã®æ¦‚è¦
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -20,13 +20,13 @@ namespace Project3S {
 		{
 			InitializeComponent();
 			//
-			//TODO: ‚±‚±‚ÉƒRƒ“ƒXƒgƒ‰ƒNƒ^[ ƒR[ƒh‚ğ’Ç‰Á‚µ‚Ü‚·
+			//TODO: ã“ã“ã«ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãƒ¼ ã‚³ãƒ¼ãƒ‰ã‚’è¿½åŠ ã—ã¾ã™
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// g—p’†‚ÌƒŠƒ\[ƒX‚ğ‚·‚×‚ÄƒNƒŠ[ƒ“ƒAƒbƒv‚µ‚Ü‚·B
+		/// ä½¿ç”¨ä¸­ã®ãƒªã‚½ãƒ¼ã‚¹ã‚’ã™ã¹ã¦ã‚¯ãƒªãƒ¼ãƒ³ã‚¢ãƒƒãƒ—ã—ã¾ã™ã€‚
 		/// </summary>
 		~MyForm()
 		{
@@ -68,14 +68,14 @@ namespace Project3S {
 
 	private:
 		/// <summary>
-		/// •K—v‚ÈƒfƒUƒCƒi[•Ï”‚Å‚·B
+		/// å¿…è¦ãªãƒ‡ã‚¶ã‚¤ãƒŠãƒ¼å¤‰æ•°ã§ã™ã€‚
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// ƒfƒUƒCƒi[ ƒTƒ|[ƒg‚É•K—v‚Èƒƒ\ƒbƒh‚Å‚·B‚±‚Ìƒƒ\ƒbƒh‚Ì“à—e‚ğ
-		/// ƒR[ƒh ƒGƒfƒBƒ^[‚Å•ÏX‚µ‚È‚¢‚Å‚­‚¾‚³‚¢B
+		/// ãƒ‡ã‚¶ã‚¤ãƒŠãƒ¼ ã‚µãƒãƒ¼ãƒˆã«å¿…è¦ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã™ã€‚ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®å†…å®¹ã‚’
+		/// ã‚³ãƒ¼ãƒ‰ ã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ã§å¤‰æ›´ã—ãªã„ã§ãã ã•ã„ã€‚
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -130,20 +130,20 @@ namespace Project3S {
 			});
 			this->mnuFile->Name = L"mnuFile";
 			this->mnuFile->Size = System::Drawing::Size(66, 20);
-			this->mnuFile->Text = L"ƒtƒ@ƒCƒ‹(&F)";
+			this->mnuFile->Text = L"ãƒ•ã‚¡ã‚¤ãƒ«(&F)";
 			// 
 			// mnuOpenDir
 			// 
 			this->mnuOpenDir->Name = L"mnuOpenDir";
 			this->mnuOpenDir->Size = System::Drawing::Size(154, 22);
-			this->mnuOpenDir->Text = L"ƒtƒHƒ‹ƒ_‚ğŠJ‚­(&O)";
+			this->mnuOpenDir->Text = L"ãƒ•ã‚©ãƒ«ãƒ€ã‚’é–‹ã(&O)";
 			this->mnuOpenDir->Click += gcnew System::EventHandler(this, &MyForm::mnuOpenDir_Click);
 			// 
 			// mnuExit
 			// 
 			this->mnuExit->Name = L"mnuExit";
 			this->mnuExit->Size = System::Drawing::Size(154, 22);
-			this->mnuExit->Text = L"I—¹(&X)";
+			this->mnuExit->Text = L"çµ‚äº†(&X)";
 			this->mnuExit->Click += gcnew System::EventHandler(this, &MyForm::mnuExit_Click);
 			// 
 			// mnuEdit
@@ -154,20 +154,20 @@ namespace Project3S {
 			});
 			this->mnuEdit->Name = L"mnuEdit";
 			this->mnuEdit->Size = System::Drawing::Size(57, 20);
-			this->mnuEdit->Text = L"•ÒW(&E)";
+			this->mnuEdit->Text = L"ç·¨é›†(&E)";
 			// 
 			// mnuCopyPath
 			// 
 			this->mnuCopyPath->Name = L"mnuCopyPath";
 			this->mnuCopyPath->Size = System::Drawing::Size(180, 22);
-			this->mnuCopyPath->Text = L"ƒtƒHƒ‹ƒ_ƒpƒX‚ÌƒRƒs[";
+			this->mnuCopyPath->Text = L"ãƒ•ã‚©ãƒ«ãƒ€ãƒ‘ã‚¹ã®ã‚³ãƒ”ãƒ¼";
 			this->mnuCopyPath->Click += gcnew System::EventHandler(this, &MyForm::mnuCopyPath_Click);
 			// 
 			// mnuCopyFileList
 			// 
 			this->mnuCopyFileList->Name = L"mnuCopyFileList";
 			this->mnuCopyFileList->Size = System::Drawing::Size(180, 22);
-			this->mnuCopyFileList->Text = L"ƒtƒ@ƒCƒ‹ˆê——‚ÌƒRƒs[(&C)";
+			this->mnuCopyFileList->Text = L"ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã®ã‚³ãƒ”ãƒ¼(&C)";
 			this->mnuCopyFileList->Click += gcnew System::EventHandler(this, &MyForm::mnuCopyFileList_Click);
 			// 
 			// mnuHelp
@@ -175,13 +175,13 @@ namespace Project3S {
 			this->mnuHelp->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mnuAbout });
 			this->mnuHelp->Name = L"mnuHelp";
 			this->mnuHelp->Size = System::Drawing::Size(65, 20);
-			this->mnuHelp->Text = L"ƒwƒ‹ƒv(&H)";
+			this->mnuHelp->Text = L"ãƒ˜ãƒ«ãƒ—(&H)";
 			// 
 			// mnuAbout
 			// 
 			this->mnuAbout->Name = L"mnuAbout";
 			this->mnuAbout->Size = System::Drawing::Size(158, 22);
-			this->mnuAbout->Text = L"ƒo[ƒWƒ‡ƒ“î•ñ(&A)";
+			this->mnuAbout->Text = L"ãƒãƒ¼ã‚¸ãƒ§ãƒ³æƒ…å ±(&A)";
 			this->mnuAbout->Click += gcnew System::EventHandler(this, &MyForm::mnuAbout_Click);
 			// 
 			// statusStrip1
@@ -217,7 +217,7 @@ namespace Project3S {
 			this->btnJoin->Name = L"btnJoin";
 			this->btnJoin->Size = System::Drawing::Size(75, 23);
 			this->btnJoin->TabIndex = 3;
-			this->btnJoin->Text = L"Œ‹‡";
+			this->btnJoin->Text = L"çµåˆ";
 			this->btnJoin->UseVisualStyleBackColor = true;
 			this->btnJoin->Click += gcnew System::EventHandler(this, &MyForm::btnJoin_Click);
 			// 
@@ -228,7 +228,7 @@ namespace Project3S {
 			this->btnReLoad->Name = L"btnReLoad";
 			this->btnReLoad->Size = System::Drawing::Size(75, 23);
 			this->btnReLoad->TabIndex = 2;
-			this->btnReLoad->Text = L"XV";
+			this->btnReLoad->Text = L"æ›´æ–°";
 			this->btnReLoad->UseVisualStyleBackColor = true;
 			this->btnReLoad->Click += gcnew System::EventHandler(this, &MyForm::btnReLoad_Click);
 			// 
@@ -289,12 +289,12 @@ namespace Project3S {
 			// 
 			// colName
 			// 
-			this->colName->Text = L"ƒtƒ@ƒCƒ‹–¼";
+			this->colName->Text = L"ãƒ•ã‚¡ã‚¤ãƒ«å";
 			this->colName->Width = 130;
 			// 
 			// colFullPath
 			// 
-			this->colFullPath->Text = L"ƒpƒX";
+			this->colFullPath->Text = L"ãƒ‘ã‚¹";
 			// 
 			// richTextBox1
 			// 
@@ -356,18 +356,18 @@ namespace Project3S {
 			statusLabel1->Text = "";
 		}
 		catch (Exception^ e) {
-			statusLabel1->Text = "ƒtƒHƒ‹ƒ_‚ªŠJ‚¯‚Ü‚¹‚ñF" + e->GetType();
-			MessageBox::Show("ƒtƒHƒ‹ƒ_‚ªŠJ‚¯‚Ü‚¹‚ñB");
+			statusLabel1->Text = "ãƒ•ã‚©ãƒ«ãƒ€ãŒé–‹ã‘ã¾ã›ã‚“ï¼š" + e->GetType();
+			MessageBox::Show("ãƒ•ã‚©ãƒ«ãƒ€ãŒé–‹ã‘ã¾ã›ã‚“ã€‚");
 		}
 	}
 	private: System::Void mnuCopyPath_Click(System::Object^  sender, System::EventArgs^  e) {
 		try {
 			Clipboard::SetDataObject(textBox1->Text, true);
-			statusLabel1->Text = "ƒpƒX‚ğƒRƒs[‚µ‚Ü‚µ‚½B";
+			statusLabel1->Text = "ãƒ‘ã‚¹ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚";
 		}
 		catch (Exception^ e) {
-			statusLabel1->Text = "ƒRƒs[‚Å‚«‚Ü‚¹‚ñF" + e->GetType();
-			MessageBox::Show("ƒRƒs[‚Å‚«‚Ü‚¹‚ñB");
+			statusLabel1->Text = "ã‚³ãƒ”ãƒ¼ã§ãã¾ã›ã‚“ï¼š" + e->GetType();
+			MessageBox::Show("ã‚³ãƒ”ãƒ¼ã§ãã¾ã›ã‚“ã€‚");
 		}
 	}
 	private: System::Void btnReLoad_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -382,7 +382,7 @@ namespace Project3S {
 			statusLabel1->Text = Convert::ToString(listView1->Items->Count);
 		}
 		catch (Exception^ e) {
-			statusLabel1->Text = "ŠY“–ƒtƒ@ƒCƒ‹‚Í‚ ‚è‚Ü‚¹‚ñF" + e->GetType();
+			statusLabel1->Text = "è©²å½“ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã‚ã‚Šã¾ã›ã‚“ï¼š" + e->GetType();
 		}
 	}
 	private: System::Void listView1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -403,8 +403,8 @@ namespace Project3S {
 				richTextBox1->Text = strBuf;
 			}
 			catch (Exception^ e) {
-				statusLabel1->Text = "“Ç‚İ‚İƒGƒ‰[F" + e->GetType();
-				richTextBox1->Text = "“Ç‚İ‚İƒGƒ‰[";
+				statusLabel1->Text = "èª­ã¿è¾¼ã¿ã‚¨ãƒ©ãƒ¼ï¼š" + e->GetType();
+				richTextBox1->Text = "èª­ã¿è¾¼ã¿ã‚¨ãƒ©ãƒ¼";
 			}
 		}
 	}
@@ -415,11 +415,11 @@ namespace Project3S {
 				files = files + listView1->Items[i]->SubItems[0]->Text + System::Environment::NewLine;
 			}
 			Clipboard::SetDataObject(files, true);
-			statusLabel1->Text = "ƒtƒ@ƒCƒ‹ˆê——‚ğƒRƒs[‚µ‚Ü‚µ‚½B";
+			statusLabel1->Text = "ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚";
 		}
 		catch (Exception^ e) {
-			statusLabel1->Text = "ƒRƒs[‚Å‚«‚Ü‚¹‚ñF" + e->GetType();
-			MessageBox::Show("ƒRƒs[‚Å‚«‚Ü‚¹‚ñB");
+			statusLabel1->Text = "ã‚³ãƒ”ãƒ¼ã§ãã¾ã›ã‚“ï¼š" + e->GetType();
+			MessageBox::Show("ã‚³ãƒ”ãƒ¼ã§ãã¾ã›ã‚“ã€‚");
 		}
 	}
 	private: System::Void btnJoin_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -447,11 +447,11 @@ namespace Project3S {
 					str = str + strBuf;
 				}
 				catch (Exception^ e) {
-					statusLabel1->Text = "“Ç‚İ‚İƒGƒ‰[F" + e->GetType();
+					statusLabel1->Text = "èª­ã¿è¾¼ã¿ã‚¨ãƒ©ãƒ¼ï¼š" + e->GetType();
 					if (i > 0) {
 						str = str + System::Environment::NewLine + "--------------------" + System::Environment::NewLine;
 					}
-					str = str + "“Ç‚İ‚İƒGƒ‰[";
+					str = str + "èª­ã¿è¾¼ã¿ã‚¨ãƒ©ãƒ¼";
 				}
 			}
 			f = gcnew FormJoinView(str);
